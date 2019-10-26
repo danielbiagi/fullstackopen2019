@@ -1,0 +1,49 @@
+{
+  "notes": [
+    {
+      "content": "custom-hooks are awesome!",
+      "id": 1
+    },
+    {
+      "content": "best feature ever <3",
+      "id": 2
+    },
+    {
+      "content": "teste",
+      "id": 3
+    },
+    {
+      "content": "sera?",
+      "id": 4
+    },
+    {
+      "content": "123",
+      "id": 5
+    },
+    {
+      "content": "funfa",
+      "id": 6
+    },
+    {
+      "content": "funciona essa merdaaaa",
+      "id": 7
+    }
+  ],
+  "persons": [
+    {
+      "name": "mluukkai",
+      "number": "040-5483923",
+      "id": 1
+    },
+    {
+      "name": "hahahah",
+      "number": "12323123123",
+      "id": 2
+    },
+    {
+      "name": "viver",
+      "number": "lutar",
+      "id": 3
+    }
+  ]
+}

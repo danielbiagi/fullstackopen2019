@@ -1,0 +1,39 @@
+{
+  "name": "part4-blog",
+  "version": "1.0.0",
+  "description": "Exercise for FullstackOpen2019",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "NODE_ENV=production node index.js",
+    "watch": "NODE_ENV=development nodemon index.js",
+    "test": "NODE_ENV=test jest --verbose --runInBand --detectOpenHandles",
+    "debug": "nodemon --inspect index.js",
+    "build:ui": "rm -rf build && cd ../fullstackopen2019/part2/phonebook/ && npm run build --prod && cp -r build ../../../part3-phonebook-backend/",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild  && git push heroku master && npm run deploy",
+    "logs:prod": "heroku logs --tail"
+  },
+  "author": "Daniel Biagi",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.3",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

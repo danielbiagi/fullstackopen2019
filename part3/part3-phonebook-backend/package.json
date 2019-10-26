@@ -1,0 +1,35 @@
+{
+  "name": "part3-phonebook-backend",
+  "version": "1.0.0",
+  "description": "Exercise for fullstackopen2019",
+  "main": "index.js",
+  "engines": {
+    "node": "10.16.3"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../fullstackopen2019/part2/phonebook/ && npm run build --prod && cp -r build ../../../part3-phonebook-backend/",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild  && git push heroku master && npm run deploy",
+    "logs:prod": "heroku logs --tail"
+  },
+  "author": "Daniel Biagi",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1",
+    "morgan-body": "^2.4.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "eslint": "^6.4.0",
+    "nodemon": "^1.19.1"
+  }
+}
